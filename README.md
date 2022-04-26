@@ -1,3 +1,5 @@
+# This is work in progress, no new feature is yet committed!
+
 # Hugo Scroll With Blog!
 
 A [Hugo](https://gohugo.io/)-theme for both a pretty, quick and simple single-page and a blog.
@@ -66,7 +68,7 @@ Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you
 
 ## Issues / Feedback / Contributing
 
-Please use [GitHub issues](https://github.com/neclepsio/hugo-scroll-with-blog/issues) and [Pull Requests](https://github.comneclepsio/hugo-scroll-with-blog/pulls).
+Please use [GitHub issues](https://github.com/neclepsio/hugo-scroll-with-blog/issues) and [Pull Requests](https://github.com/neclepsio/hugo-scroll-with-blog/pulls).
 
 ## Special Thanks
 
