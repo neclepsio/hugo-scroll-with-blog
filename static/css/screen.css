@@ -386,10 +386,11 @@ table td {
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 
 table th {
-  color: #000;
+/*  color: #000; */
 }
 
 table caption + thead tr:first-child th,
@@ -411,14 +412,13 @@ table table table {
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
-  background-color: #f6f6f6;
+/*  background-color: #f6f6f6; */
+  background: transparent;
 }
 
-table.plain {
-  tbody > tr:nth-child(odd) > td,
-  tbody > tr:nth-child(odd) > th {
-    background: transparent;
-  }
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent;
 }
 
 li {

@@ -2,7 +2,7 @@
 
 # Hugo Scroll With Blog!
 
-A [Hugo](https://gohugo.io/)-theme for both a pretty, quick and simple single-page and a blog.
+A [Hugo](https://gohugo.io/) theme for both a pretty, quick and simple single-page and a blog.
 
 ## Credits
 
@@ -36,7 +36,7 @@ Please check out the `config.toml` included on the `exampleSite` of this theme.
 
 ### Starting fresh
 
-If you are starting fresh, simply copy over the contents of the `exampleSite`-directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
+If you are starting fresh, simply copy over the contents of the `exampleSite` directory included in this theme to your source directory. That should give you a good idea about how things work, and then you can go on from there to make the site your own.
 
 ### Adding content
 
@@ -57,14 +57,14 @@ hugo new my-new-page.md
 This theme includes the full set of [Fork Awesome 1.1.7 Icons][fork-awesome-icons]. Use the `{{<icon>}}`-[shortcode][hugo-shortcodes] with the respective "fa fa-ICONNAME"-`class` to use an icon directly in your `.markdown` files à la
 
 ```markdown
-Look at this nice »envelope«-icon: {{<icon class="fa fa-envelope">}}. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
+Look at this nice  envelope icon: {{<icon class="fa fa-envelope">}}. I took this from https://forkaweso.me/Fork-Awesome/icon/envelope/ :-)
 ```
 
 For the full list of icons, see [Fork Awesome 1.1.7 Icons][fork-awesome-icons].
 
 ### Adding your branding / colors / css
 
-Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>` tag _or_ you may add a `<link>` tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the `custom_head.html` file from the `exampleSite` directory to get started and to find more detailed instructions.
+Add a `custom_head.html` file to your `layouts/partials`-directory. In there you may add a `<style>` tag _or_ you may add a `<link>` tag referencing your own `custom.css` (in case you prefer to have a separate `.css` file). Checkout the `custom_head.html` file from the `exampleSite` directory to get started and to find more detailed instructions.
 
 ## Issues / Feedback / Contributing
 
@@ -72,7 +72,7 @@ Please use [GitHub issues](https://github.com/neclepsio/hugo-scroll-with-blog/is
 
 ## Special Thanks
 
-- G to [Hugo Scroll](https://github.com/janraasch/hugo-scroll), for the base of this theme.
+- Go to [Hugo Scroll](https://github.com/janraasch/hugo-scroll), for the base of this theme.
 - Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
 - Go to [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the `exampleSite`.
 
