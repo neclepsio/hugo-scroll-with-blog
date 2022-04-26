@@ -1,12 +1,12 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Hugo Scroll"
+name = "Hugo Scroll With Blog"
 license = "MIT"
-licenselink = "https://github.com/janraasch/hugo-scroll/blob/master/LICENSE"
-description = "A Hugo theme for pretty, quick and simple single-page websites."
-homepage = "https://github.com/janraasch/hugo-scroll"
-demosite = "https://janraasch.github.io/hugo-scroll/"
+licenselink = "https://github.com/neclepsio/hugo-scroll-with-blog/blob/master/LICENSE"
+description = "A Hugo theme for both a pretty, quick and simple single-page and blog."
+homepage = "https://github.com/neclepsio/hugo-scroll-with-blog"
+# demosite = "https://janraasch.github.io/hugo-scroll/"
 tags = [
   "clean",
   "contact",
@@ -21,16 +21,17 @@ tags = [
   "single page",
   "starter",
   "responsive",
-  "theme"
+  "theme",
+  "blog",
 ]
 features = ["cover-image", "favicon", "header-menu", "auto-scroll"]
 min_version = "0.41.0"
 
 [author]
-  name = "Jan Raasch"
-  homepage = "https://www.janraasch.com"
+  name = "Ignazio Di Napoli"
+  homepage = "http://github.com/neclepsio"
 
 [original]
-  name = "GhostScroll"
-  homepage = "https://github.com/grmmph/GhostScroll"
-  repo = "https://github.com/grmmph/GhostScroll"
+  name = "Hugo Scroll"
+  homepage = "https://github.com/janraasch/hugo-scroll"
+  repo = "https://github.com/janraasch/hugo-scroll"

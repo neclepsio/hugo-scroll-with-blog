@@ -1,25 +1,17 @@
-# Hugo Scroll ![Test](https://github.com/janraasch/hugo-scroll/workflows/CI/badge.svg?branch=master&event=push) [![Pay me][paypal-svg]][paypal-dot-me] [![Sponsor me][github-sponsors-svg]][github-sponsors]
+# Hugo Scroll With Blog!
 
-📜 A [Hugo](https://gohugo.io/)-theme for pretty, quick and simple single-page websites.
+A [Hugo](https://gohugo.io/)-theme for both a pretty, quick and simple single-page and a blog.
 
-![Screenshot Hugo Scroll Theme](https://raw.githubusercontent.com/janraasch/hugo-scroll/master/images/tn.png)
+## Credits
 
-## Demo
-
-For a current & working demo of this theme please check out https://janraasch.github.io/hugo-scroll/ 🎯.
-
-## Sponsor 💟
-
-Support my work on this theme via [GitHub Sponsors][github-sponsors] (recurring) or [PayPal][paypal-dot-me] (one-time).
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=janraasch)][github-sponsors]
+This is based on [Hugo Scroll](https://github.com/janraasch/hugo-scroll).
 
 ## Installation
 
 If you already have a hugo site on your machine, you can simply add this theme via
 
 ```
-git submodule add https://github.com/janraasch/hugo-scroll.git themes/hugo-scroll
+git submodule add https://github.com/neclepsio/hugo-scroll-with-blog.git themes/hugo-scroll-with-blog
 ```
 
 Then, adjust the `config.toml` as detailed below.
@@ -27,8 +19,8 @@ Then, adjust the `config.toml` as detailed below.
 If you simply want to check out the `exampleSite`, you can run
 
 ```
-git clone https://github.com/janraasch/hugo-scroll.git hugo-scroll
-cd hugo-scroll
+git clone https://github.com/neclepsio/hugo-scroll-with-blog.git hugo-scroll-with-blog
+cd hugo-scroll-with-blog
 hugo server --source=exampleSite --themesDir=../..
 ```
 
@@ -36,7 +28,7 @@ For more information read the official [setup guide][hugo-setup-guide] of Hugo.
 
 ## Adjust configuration / config.toml
 
-Please check out the [config.toml](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/config.toml) included on the [exampleSite](https://github.com/janraasch/hugo-scroll/tree/master/exampleSite) of this theme.
+Please check out the `config.toml` included on the `exampleSite` of this theme.
 
 ## Content & structure
 
@@ -70,27 +62,22 @@ For the full list of icons, see [Fork Awesome 1.1.7 Icons][fork-awesome-icons].
 
 ### Adding your branding / colors / css
 
-Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>`-tag _or_ you may add a `<link>`-tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the [`custom_head.html`](https://github.com/janraasch/hugo-scroll/blob/master/exampleSite/layouts/partials/custom_head.html)-file from the `exampleSite`-directory to get started and to find more detailed instructions.
+Add a `custom_head.html`-file to your `layouts/partials`-directory. In there you may add a `<style>` tag _or_ you may add a `<link>` tag referencing your own `custom.css` (in case you prefer to have a separate `.css`-file). Checkout the `custom_head.html` file from the `exampleSite` directory to get started and to find more detailed instructions.
 
 ## Issues / Feedback / Contributing
 
-Please use [GitHub issues](https://github.com/janraasch/hugo-scroll/issues) and [Pull Requests](https://github.com/janraasch/hugo-scroll/pulls).
+Please use [GitHub issues](https://github.com/neclepsio/hugo-scroll-with-blog/issues) and [Pull Requests](https://github.comneclepsio/hugo-scroll-with-blog/pulls).
 
-If you do not have a GitHub-account, feel free to hit me up via e-mail (see [janraasch.com](https://www.janraasch.com)).
+## Special Thanks
 
-## Special Thanks 🎁
-
+- G to [Hugo Scroll](https://github.com/janraasch/hugo-scroll), for the base of this theme.
 - Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
-- Go to [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the [exampleSite](https://github.com/janraasch/hugo-scroll/tree/master/exampleSite).
+- Go to [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the `exampleSite`.
 
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Jan Raasch](https://www.janraasch.com)
+[MIT License](http://en.wikipedia.org/wiki/MIT_License) © Ignazio Di Napoli
 
-[paypal-dot-me]: https://www.paypal.me/janraasch/29,00
-[github-sponsors]: https://github.com/sponsors/janraasch
-[paypal-svg]: https://img.shields.io/badge/onetime-donation-11dde2.svg?logo=paypal
-[github-sponsors-svg]: https://img.shields.io/badge/recurring-sponsorship-ee4aaa.svg?logo=github
 [hugo-setup-guide]: https://gohugo.io/getting-started/installing
 [fork-awesome]: https://forkaweso.me/Fork-Awesome/
 [fork-awesome-icons]: https://forkaweso.me/Fork-Awesome/icons/

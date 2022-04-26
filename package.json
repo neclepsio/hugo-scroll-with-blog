@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "hugo-scroll",
+  "name": "hugo-scroll-with-blog",
   "version": "1.0.0",
-  "description": "A Hugo theme for pretty, quick and simple single-page websites.",
+  "description": "A Hugo theme for both a pretty, quick and simple single-page and blog.",
   "main": "index.js",
   "scripts": {
     "test": "prettier --check . ",
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janraasch/hugo-scroll.git"
+    "url": "git+https://github.com/neclepsio/hugo-scroll-with-blog.git"
   },
   "author": {
-    "name": "Jan Raasch",
-    "email": "jan@janraasch.com",
-    "url": "https://www.janraasch.com"
+    "name": "Ignazio Di Napoli",
+    "email": "neclepsio@gmail.com",
+    "url": "https://www.github.com/neclepsio/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/janraasch/hugo-scroll/issues"
+    "url": "https://github.com/neclepsio/hugo-scroll-with-blog/issues"
   },
-  "homepage": "https://github.com/janraasch/hugo-scroll#readme",
+  "homepage": "https://github.com/neclepsio/hugo-scroll-with-blog#readme",
   "devDependencies": {
     "prettier": "^2.6.1",
     "prettier-plugin-go-template": "0.0.11"
