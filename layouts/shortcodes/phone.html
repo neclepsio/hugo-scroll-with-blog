@@ -1,0 +1,6 @@
+{{ $phone := replace (.Get 0) " " "" -}}
+{{ $what := .Get 1 -}}
+<a href="tel:+39{{$phone}}">{{.Get 0}}</a>
+{{- if in $what "s"}}&ensp;<a href="sms:{{$phone}}"><i class="fa fa-envelope-o"></i></a>{{end}}
+{{- if in $what "w"}}&ensp;<a href="http://wa.me/39{{$phone}}"><i class="fa fa-whatsapp"></i></a>{{end}}
+<!--{{if in $what "t"}}<a href="tg://msg?to=+39{{$phone}}"><i class="fa fa-telegram"></i></a>{{end}}-->
