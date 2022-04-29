@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $posts := .Site.GetPage "/posts" }}
+{{ $posts := $posts.Resources.ByType "page" }}
+{{ $posts := cond .Site.BuildDrafts $posts (where $posts "Draft" "==" false) }}
+{{ $main := .Site.GetPage "/" }}
+<header id="site-head" {{ with $main.Params.header_image }}style="background-image: url(/{{ . }})"{{ end }}>
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+            <table>
+                <td>
+                    <a href="/"><i id='header-home' class='fa fa-angle-left'></i></a>
+                </td>
+                <td>
+                    {{ with $main.Params.header_headline }}<h1 class="blog-title">{{ . }}</h1>{{ end }}
+                    {{ with $main.Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
+                </td>
+            </table>
+        </div>
+    </div>
+</header>
+<main class="content" role="main">
+    {{ range $index_val, $elem_val := $posts }}
+        <div class='post-holder'>
+                <header class="post-header">
+                    <a id="post-{{.Name | anchorize}}"></a>
+                    <h2 class="post-title">{{ .Title }}</h2>
+                    <h2 class="post-date">{{ .Date.Format "2/1/2006" }}</h2>
+                </header>
+                <section class="post-content">
+                    {{ .Content }}
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    {{ end }}
+</main>
+{{ end }}
