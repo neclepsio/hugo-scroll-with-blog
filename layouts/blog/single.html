@@ -3,12 +3,12 @@
 {{ $posts := $posts.Resources.ByType "page" }}
 {{ $posts := cond .Site.BuildDrafts $posts (where $posts "Draft" "==" false) }}
 {{ $main := .Site.GetPage "/" }}
-<header id="site-head" {{ with $main.Params.header_image }}style="background-image: url(/{{ . }})"{{ end }}>
+<header id="site-head" {{ with $main.Params.header_image }}style="background-image: url(../{{ . }})"{{ end }}>
     <div class="vertical">
         <div id="site-head-content" class="inner">
             <table>
                 <td>
-                    <a href="/">
+                    <a href="../">
                         <i id='header-home' class='fa fa-angle-left'></i>
                     </a>
                 </td>
