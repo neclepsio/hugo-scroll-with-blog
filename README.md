@@ -73,7 +73,7 @@ Please use [GitHub issues](https://github.com/neclepsio/hugo-scroll-with-blog/is
 ## Special Thanks
 
 - Go to [Hugo Scroll](https://github.com/janraasch/hugo-scroll), for the base of this theme.
-- Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll)-theme which formed the basis of this [Hugo](https://gohugo.io/)-theme.
+- Go to [Yonatan Wolowelsky](https://github.com/grmmph), for the great [GhostScroll](https://github.com/grmmph/GhostScroll) theme which formed the basis of this [Hugo](https://gohugo.io/) theme.
 - Go to [Pexels](https://www.pexels.com), for supplying those wonderful _free_ stock photos on the `exampleSite`.
 
 ## License
