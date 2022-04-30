@@ -1,11 +1,26 @@
+function navTopHeight() {
+    var navRect = document.querySelector(".fixed-nav").getBoundingClientRect();
+    if (navRect.top <= 0) {
+        return navRect.bottom;
+    }
+    return 0;
+}
+
 function scrollToId (id) {
     var el = document.getElementById(id);
     var y = el.getBoundingClientRect().top + window.scrollY;
+    
+    y -= navTopHeight();
+    
     window.scroll({
         top: y,
         behavior: "smooth",
     });
 } 
+
+document.getElementById("header-arrow").addEventListener("click", function(ev) {
+    scrollToId(document.querySelector(".fn-item").dataset.targetId);
+});
 
 document.querySelectorAll("a.btn.site-menu, a.fn-item").forEach(function(el) { 
     el.addEventListener("click", function(ev) {
@@ -15,14 +30,17 @@ document.querySelectorAll("a.btn.site-menu, a.fn-item").forEach(function(el) {
 
 function onScrolled() {
     var lastActive = null;
-    document.querySelectorAll("a.fn-item").forEach(function(el) { 
+    var navTop = navTopHeight();
+    document.querySelectorAll("a.fn-item").forEach(function(el, i, array) { 
         var article = document.querySelector("article[id='" + el.dataset.targetId + "']")
         var articleRect = article.getBoundingClientRect();
         var height = document.documentElement.clientHeight;
-        var tol = height / 10;
+        var tol = height / 2;
 
-        console.log(el.dataset.targetId, articleRect.top, articleRect.bottom);
-        if (articleRect.top < tol && articleRect.bottom > 0) {
+        if (articleRect.top < navTop + tol && articleRect.bottom > 0) {
+            lastActive = el;
+        }
+        if (i == array.length - 1 && articleRect.bottom < height) {
             lastActive = el;
         }
 

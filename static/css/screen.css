@@ -6,7 +6,7 @@
 :root {
   --head-color: #fff;
   
-  --fixed-nav-background: rgba(255, 255, 255, 0.9);
+  --fixed-nav-background: rgba(255, 255, 255, 0.95);
   --a-hover-color: #86c440;
   
   --btn-background: #9fd067;
@@ -300,9 +300,8 @@ a.btn:hover {
 
 .fixed-nav {
   display: none;
-  opacity: 1;
   position: fixed;
-  top: 40px;
+  top: 20px;
   left: 2%;
   z-index: 99999;
   font-family: "Open Sans Condensed", sans-serif;
@@ -389,6 +388,9 @@ table.news td:first-child {
   left: 6%;
   border-top-color: var(--odd-background-color);
 }
+.post-holder:last-child .post-after {
+  display: none;
+}
 
 .post-content img {
   display: block;
@@ -416,6 +418,3 @@ table.news td:first-child {
 .site-footer a:hover {
   color: var(--footer-color-hover);
 }
-
-@import url(media-1130.css);
-@import url(media-500.css);
