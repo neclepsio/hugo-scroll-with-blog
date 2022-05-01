@@ -112,10 +112,6 @@ a.fa {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--a-hover-color);
-}
-
 p,
 ul,
 ol {
@@ -252,10 +248,6 @@ blockquote p {
   color: var(--head-color);
 }
 
-#site-head-content table td:first-child:hover {
-  opacity: 0.9;
-}
-
 a.btn {
   background-color: var(--btn-background);
   color: var(--btn-color);
@@ -276,10 +268,6 @@ a.btn {
   font-weight: lighter;
 }
 
-a.btn:hover {
-  background: var(--a-hover-color);
-}
-
 #header-arrow {
   margin: -10px auto;
   text-align: center;
@@ -293,9 +281,6 @@ a.btn:hover {
   transition: all ease 0.3s;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
-}
-#header-arrow:hover {
-  opacity: 0.9;
 }
 
 .fixed-nav {
@@ -328,9 +313,6 @@ a.btn:hover {
   display: block;
   cursor: pointer;
   opacity: 0.7;
-}
-.fn-item:hover {
-  color: var(--btn-background);
 }
 .fn-item.active {
   color: var(--a-hover-color);
@@ -420,6 +402,28 @@ table.news td:first-child {
   text-decoration: underline;
 }
 
-.site-footer a:hover {
-  color: var(--footer-color-hover);
+@media (hover: hover) and (pointer: fine) {
+  .fn-item:hover {
+    color: var(--btn-background);
+  }
+  
+  a:hover {
+    color: var(--a-hover-color);
+  }
+  
+  #site-head-content table td:first-child:hover {
+    opacity: 0.9;
+  }
+  
+  a.btn:hover {
+    background: var(--a-hover-color);
+  }
+  
+  #header-arrow:hover {
+    opacity: 0.9;
+  }
+  
+  .site-footer a:hover {
+    color: var(--footer-color-hover);
+  }
 }
