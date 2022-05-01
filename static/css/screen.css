@@ -213,7 +213,8 @@ blockquote p {
   margin-bottom: 0rem;
   text-align: center;
   color: var(--head-color);
-  background: var(--body-color) no-repeat center center;
+  background: no-repeat center center;
+  background-color: var(--odd-background-color);
   background-size: cover;
 }
 
