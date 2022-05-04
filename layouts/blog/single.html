@@ -3,6 +3,7 @@
 {{ $posts := $posts.Resources.ByType "page" }}
 {{ $posts := cond .Site.BuildDrafts $posts (where $posts "Draft" "==" false) }}
 {{ partial "single_header.html" . }}
+{{ $dateFormat := (.Site.GetPage "/").Params.date_format }}
 <main class="content" role="main">
     {{ range $index_val, $elem_val := $posts }}
         <div class='post-holder'>
@@ -10,7 +11,7 @@
                 <header class="post-header">
                     <a id="post-{{.Name | anchorize}}"></a>
                     <h2 class="post-title">{{ .Title }}</h2>
-                    <h6 class="post-date">{{ .Date.Format "2/1/2006" }}</h6>
+                    <h6 class="post-date">{{ .Date.Format $dateFormat }}</h6>
                 </header>
                 <section class="post-content">
                     {{ .Content }}

@@ -2,7 +2,7 @@
 {{ $sections := .Site.GetPage "/homepage" }}
 {{ $sections := $sections.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
-<header id="site-head" class="full-height" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
+<header id="site-head" class="full-height" {{ with .Params.header_image }}style="background-image: url({{ . | absURL }})"{{ end }}>
     <div class="vertical">
         <div id="site-head-content" class="inner">
             {{ with .Params.header_headline }}<h1 class="blog-title">{{ . }}</h1>{{ end }}
@@ -37,15 +37,13 @@
                             {{ $posts := cond .Site.BuildDrafts $posts (where $posts "Draft" "==" false) }}
                             {{ range $index_val, $elem_val := first .Params.addlastnews $posts }}
                                 <tr>
-                                    <td>{{ .Date.Format "2/1/2006" }}</td>
-                                    <td><a href="blog/#post-{{.Name | anchorize}}">{{ .Title }}</a></td>
+                                    <td>{{ .Date.Format $.Params.date_format }}</td>
+                                    <td><a href='{{ "blog" | absURL }}#post-{{ .Name | anchorize }}'>{{ .Title }}</a></td>
                                 </tr>
                             {{ end }}
-                            {{ if .Params.allnews }}
-                                <tr>
-                                    <td colspan="2"><a href="blog">{{ .Params.allnews }}</a></td>
-                                </tr>
-                            {{ end }}
+                            <tr>
+                                <td colspan="2"><a href='{{ "blog" | absURL }}'>{{ $.Params.all_news_label }}</a></td>
+                            </tr>
                         </table>
                     {{ end }}
                 </section>

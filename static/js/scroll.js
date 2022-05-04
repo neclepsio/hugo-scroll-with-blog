@@ -42,9 +42,12 @@ function scrollToId (id) {
 } 
 */
 
-document.getElementById("header-arrow").addEventListener("click", function() {
-    document.querySelector(".fn-item").click();
-});
+var ha = document.getElementById("header-arrow");
+if (ha) {
+    ha.addEventListener("click", function() {
+        document.querySelector(".fn-item").click();
+    });
+}
 
 document.querySelectorAll("a.btn.site-menu, a.fn-item").forEach(function(el) { 
     el.addEventListener("click", function() {
@@ -84,9 +87,21 @@ function onScrolled() {
 }
 
 let scrollTimeoutId = -1;
+let lastScrolled = 0;
 document.addEventListener('scroll', function() {
     if (scrollTimeoutId >= 0) {
         clearTimeout(scrollTimeoutId);
+        scrollTimeoutId = -1;
     }
-    scrollTimeoutId = setTimeout(onScrolled, 100);
+    
+    var f = function() {
+        lastScrolled = Date.now();
+        onScrolled();
+    };
+
+    if (Date.now() - lastScrolled > 100) {
+        f();
+    } else {
+        scrollTimeoutId = setTimeout(f, 100);
+    }
 });
