@@ -1,5 +1,9 @@
 function navTopHeight() {
-    var navRect = document.querySelector(".fixed-nav").getBoundingClientRect();
+    var nav = document.querySelector(".fixed-nav");
+    if (!nav) {
+        return 0;
+    }
+    var navRect = nav.getBoundingClientRect();
     return (navRect.top <= 0) ? navRect.bottom : 0;
 }
 
@@ -61,6 +65,10 @@ document.querySelectorAll("a.btn.site-menu, a.fn-item").forEach(function(el) {
 });
 
 function onScrolled() {
+    var nav = document.querySelector(".fixed-nav");
+    if (!nav) {
+        return;
+    }
     var lastActive = null;
     var navTop = navTopHeight();
     var height = document.documentElement.clientHeight;
@@ -79,9 +87,9 @@ function onScrolled() {
     });
     
     if (lastActive == null) {
-        document.querySelector(".fixed-nav").classList.remove("visible");
+        nav.classList.remove("visible");
     } else {
-        document.querySelector(".fixed-nav").classList.add("visible");
+        nav.classList.add("visible");
         lastActive.classList.add("active");
     }
 }

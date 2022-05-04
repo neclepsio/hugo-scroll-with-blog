@@ -11,7 +11,7 @@
                 <header class="post-header">
                     <a id="post-{{.Name | anchorize}}"></a>
                     <h2 class="post-title">{{ .Title }}</h2>
-                    <h6 class="post-date">{{ .Date.Format $dateFormat }}</h6>
+                    <h4 class="post-date">{{ .Date.Format $dateFormat }}</h4>
                 </header>
                 <section class="post-content">
                     {{ .Content }}

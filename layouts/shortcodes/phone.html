@@ -1,6 +1,8 @@
-{{ $phone := replace (.Get 0) " " "" -}}
-{{ $what := .Get 1 -}}
-<a href="tel:+39{{$phone}}">{{.Get 0}}</a>
-{{- if in $what "s"}}&ensp;<a href="sms:{{$phone}}"><i class="fa fa-envelope-o"></i></a>{{end}}
-{{- if in $what "w"}}&ensp;<a href="http://wa.me/39{{$phone}}"><i class="fa fa-whatsapp"></i></a>{{end}}
-<!--{{if in $what "t"}}<a href="tg://msg?to=+39{{$phone}}"><i class="fa fa-telegram"></i></a>{{end}}-->
+{{ $prefix := (.Get 0) -}}
+{{ $phone := replace (.Get 1) " " "" -}}
+{{ $what := .Get 2 -}}
+{{if in $what "p"}}<a href="tel:{{$prefix}}{{$phone}}"><i class="fa fa-phone"></i></a>{{end}}
+<a href="tel:{{$prefix}}{{$phone}}">{{.Get 1}}</a>
+{{- if in $what "s"}}&ensp;<a href="sms:{{$prefix}}{{$phone}}"><i class="fa fa-commenting-o"></i></a>{{end}}
+{{- if in $what "w"}}&ensp;<a href="http://wa.me/{{substr $prefix 1}}{{$phone}}"><i class="fa fa-whatsapp"></i></a>{{end}}
+<!--{{if in $what "t"}}<a href="tg://msg?to={{$prefix}}{{$phone}}"><i class="fa fa-telegram"></i></a>{{end}}-->

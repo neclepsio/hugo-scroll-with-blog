@@ -19,7 +19,9 @@
 <main class="content" role="main">
     <div class='fixed-nav'>
         {{ range $index_val, $elem_val := $sections }}
-            <a class='fn-item' data-target-id='{{ anchorize .Title }}'>{{.Title}}</a>
+            {{ if .Params.header_menu }}
+                <a class='fn-item' data-target-id='{{ anchorize .Title }}'>{{.Title}}</a>
+            {{ end }}
         {{ end }}
     </div>
     {{ range $index_val, $elem_val := $sections }}
